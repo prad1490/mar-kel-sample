@@ -7,7 +7,7 @@ const initialState: DropdownMenuItem = {
     menuItems: ["Global Re", "chubb", "A", "B", "C", "D"]
 };
 
-export function globalBtnListReducer(state: DropdownMenuItem = initialState,
+export function globalBtnListReducer(state: any = initialState,
     action: SetglobalBtnListActions.SetglobalBtnListActions) {
     switch (action.type) {
         case SetglobalBtnListActions.SET_GRS_DROPDOWN:
