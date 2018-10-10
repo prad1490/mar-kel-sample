@@ -4,8 +4,8 @@
         <span class="mar-15-left caret "></span>
     </a>
     <ul class="dropdown-menu ">
-        <li *ngFor="let val of menus | async; first as isFirst" (click)="selectVal(val)">
-            <a [ngClass]="{'txtBold txtRed':isFirst}">{{val.name}}
+        <li *ngFor="let val of menuList; first as isFirst" (click)="selectVal(val)">
+            <a [ngClass]="{'txtBold txtRed':isFirst}">{{val}}
                 <span class="glyphicon glypycon-circle glyphicon-ok txtWhite pull-right txtSize10 line-height1dot7"
                     aria-hidden="true" *ngIf="isFirst">
                 </span>

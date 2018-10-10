@@ -1,3 +1,3 @@
 export interface DropdownMenuItem {
-    name: string;
+    menuItems: string[];
 }

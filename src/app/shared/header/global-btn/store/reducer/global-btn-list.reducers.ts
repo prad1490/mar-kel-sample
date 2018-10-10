@@ -4,19 +4,19 @@ import { DropdownMenuItem } from "../model/global-btn.model";
 
 
 const initialState: DropdownMenuItem = {
-    name: "Global Re"
-}
+    menuItems: ["Global Re", "chubb", "A", "B", "C", "D"]
+};
 
-
-export function globalBtnListReducer(state: DropdownMenuItem[] = [initialState],
+export function globalBtnListReducer(state: DropdownMenuItem = initialState,
     action: SetglobalBtnListActions.SetglobalBtnListActions) {
     switch (action.type) {
-        case SetglobalBtnListActions.SET_GLOBAL_BTN_NAME:
-            return [...state, action.payload];
+        case SetglobalBtnListActions.SET_GRS_DROPDOWN:
+            state.menuItems.unshift(action.payload);
+            return [state.menuItems.filter((el, i) => {
+                return state.menuItems.indexOf(el) == i;
+            })];
         default:
             return state;
     }
-
-
 }
 
