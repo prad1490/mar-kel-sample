@@ -7,6 +7,8 @@ import { AgGridModule, } from 'ag-grid-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
+import { StoreModule } from '@ngrx/store';
+import { globalBtnListReducer } from './shared/header/global-btn/store/reducer/global-btn-list.reducers';
 
 @NgModule({
     declarations: [
@@ -17,6 +19,7 @@ import { CommonModule } from '@angular/common';
         CommonModule,
         AgGridModule.withComponents([AppComponent]),
         HttpClientModule,
+        StoreModule.forRoot({ menus: globalBtnListReducer }),
         SharedModule
     ],
     providers: [],

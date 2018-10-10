@@ -6,10 +6,24 @@
     background: $markellRed;
     text-align: center;
     position: relative;
-    .markel-header-title{
-        line-height: 5.5;
-        font: normal normal 25px Arial, Helvetica, sans-serif;
+
+    .left-header{
+        h1:first-child{
+            a{
+                display: block;
+                background: transparent url("../../../assets/images/masthead-logo-mc-large.png")  no-repeat;
+                background-position: top;
+                text-indent: -999px;
+                width:50px;
+                height: 80px;
+            }
+        }
+        .markel-header-title{
+            line-height: 5.5;
+            font: normal normal 25px Arial, Helvetica, sans-serif;
+        }
     }
+
     .right-header{
         .search-area{
             width: 455px;

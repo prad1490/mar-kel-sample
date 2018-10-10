@@ -4,9 +4,10 @@ import { GlobalBtnDirective } from './header/global-btn/global-btn.directive';
 import { GlobalBtnComponent } from './header/global-btn/global-btn-component';
 import { HeaderComponent } from './header/header.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-    imports: [CommonModule],
+    imports: [CommonModule, ReactiveFormsModule],
     declarations: [
         GlobalBtnDirective,
         GlobalBtnComponent,
@@ -17,6 +18,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
         GlobalBtnComponent,
         HeaderComponent,
         AngularFontAwesomeModule
+
+
     ]
 })
 export class SharedModule { }
