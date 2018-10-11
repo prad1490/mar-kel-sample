@@ -5,7 +5,7 @@ export const SET_GRS_DROPDOWN = "SET_GRS_DROPDOWN";
 
 export class Setglobalbtn implements Action {
     readonly type = SET_GRS_DROPDOWN;
-    constructor(public payload: string) { }
+    constructor(public payload: number) { }
 }
 
 export type SetglobalBtnListActions = Setglobalbtn;

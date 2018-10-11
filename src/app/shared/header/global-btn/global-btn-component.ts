@@ -17,17 +17,15 @@ export class GlobalBtnComponent implements OnInit {
     menuTitle: string;
     menuList: any;
     constructor(private store: Store<DropdownMenuState>) {
+    }
+    ngOnInit() {
         this.menus = this.store.select('menus');
         this.menus.subscribe(menu => {
             this.menuTitle = Object.values(menu)[0][0];
             this.menuList = Object.values(menu)[0];
         });
     }
-    ngOnInit() {
-
-    }
-
-    selectVal(val: string) {
-        this.store.dispatch(new SetglobalBtnListActions.Setglobalbtn(val));
+    selectVal(val: any) {
+        return (val !== 0 ? this.store.dispatch(new SetglobalBtnListActions.Setglobalbtn(val)) : null)
     }
 }
