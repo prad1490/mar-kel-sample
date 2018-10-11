@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { globalBtnListReducer } from './shared/header/global-btn/store/reducer/global-btn-list.reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
     declarations: [
@@ -20,6 +21,9 @@ import { globalBtnListReducer } from './shared/header/global-btn/store/reducer/g
         AgGridModule.withComponents([AppComponent]),
         HttpClientModule,
         StoreModule.forRoot({ menus: globalBtnListReducer }),
+        StoreDevtoolsModule.instrument({
+            maxAge: 10
+        }),
         SharedModule
     ],
     providers: [],
