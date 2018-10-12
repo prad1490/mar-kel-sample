@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ag-grid-sample": {
+    "markel-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ag-grid-sample",
+            "outputPath": "dist/markel-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ag-grid-sample:build"
+            "browserTarget": "markel-app:build",
+            "port": 1337
           },
           "configurations": {
             "production": {
-              "browserTarget": "ag-grid-sample:build:production"
+              "browserTarget": "markel-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ag-grid-sample:build"
+            "browserTarget": "markel-app:build"
           }
         },
         "test": {
@@ -103,7 +104,7 @@
         }
       }
     },
-    "ag-grid-sample-e2e": {
+    "markel-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -111,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ag-grid-sample:serve"
+            "devServerTarget": "markel-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ag-grid-sample:serve:production"
+              "devServerTarget": "markel-app:serve:production"
             }
           }
         },
@@ -131,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "ag-grid-sample"
+  "defaultProject": "markel-app"
 }

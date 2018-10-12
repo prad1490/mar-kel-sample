@@ -18,8 +18,6 @@ import { ReactiveFormsModule } from '@angular/forms';
         GlobalBtnComponent,
         HeaderComponent,
         AngularFontAwesomeModule
-
-
     ]
 })
 export class SharedModule { }

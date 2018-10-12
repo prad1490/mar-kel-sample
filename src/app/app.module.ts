@@ -10,10 +10,12 @@ import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { globalBtnListReducer } from './shared/header/global-btn/store/reducer/global-btn-list.reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AgGridComponent } from './ag-grid/ag-grid.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        AgGridComponent
     ],
     imports: [
         BrowserModule,

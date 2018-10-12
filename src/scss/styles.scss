@@ -254,7 +254,7 @@ line-height: 1.7;
     order: 10;
 }
 
-//ag-grid-overrides
+ //ag-grid-overrides
 .ag-theme-material{
     .ag-header{
         background-color: #808080;
@@ -262,7 +262,7 @@ line-height: 1.7;
         color: #ffffff;
         font-weight: 100;
     }
-    .ag-header-cell{
+   /*  .ag-header-cell{
         &::after{
             border-right: 1px solid #ffffff;
             content: " ";
@@ -273,7 +273,7 @@ line-height: 1.7;
             text-indent: -2000px;
             top: 0;
         }
-    }
+    } */
     .ag-row{
         height: 45px !important;
         border-bottom:none;
@@ -283,4 +283,4 @@ line-height: 1.7;
             background-color: #F5F5F5;
         }
     }
-}
+} 

@@ -17,10 +17,4 @@ export class HeaderComponent implements OnInit {
       "searchInput": new FormControl(null)
     });
   }
-
 }
-
-// <div class="inlineBlock flexBasis72">
-// <input class="form-control form-control-lg form-control-borderless bgMarkellRed noBorder placeholderSearch fullHeight txtWhite"
-//   type="search" placeholder="Search by Deal#/ Deal name">
-// </div>
