@@ -48,6 +48,9 @@
 .bgMarkellRed{
     background-color: $markellRed;
 }
+.bgdarkGrey{
+    background-color: $darkGrey;
+}
 .noBorder{
     border: none;
 }
@@ -66,8 +69,18 @@
 .border-right-default{
     border-right: 1px solid #ffffff;
 }
+
+a{
+    color: $White;
+    &:hover{
+        color: $White;
+    }
+}
 .pad-right-25{
     padding-right:25px;
+}
+.vSpacer5{
+    width: 5px;
 }
 .pad-left-25{
     padding-left:25px;
@@ -77,6 +90,15 @@
 }
 .pad-15-right{
     padding-right: 15px;
+}
+.pad-10-right{
+    padding-right: 10px;
+}
+.pad-20-left{
+    padding-left:20px;
+}
+.pad-30-left{
+    padding-left:30px;
 }
 .mar-10-left{
     margin-left: 10px;
@@ -262,18 +284,6 @@ line-height: 1.7;
         color: #ffffff;
         font-weight: 100;
     }
-   /*  .ag-header-cell{
-        &::after{
-            border-right: 1px solid #ffffff;
-            content: " ";
-            height: 25px;
-            margin-top: 15px;
-            position: absolute;
-            right: 0;
-            text-indent: -2000px;
-            top: 0;
-        }
-    } */
     .ag-row{
         height: 45px !important;
         border-bottom:none;
@@ -284,3 +294,10 @@ line-height: 1.7;
         }
     }
 } 
+
+.quickLinks{
+    color: $White;
+    height: 35px;
+    width: 100%;
+    line-height: 2.8;
+}
