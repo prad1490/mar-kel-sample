@@ -25,7 +25,7 @@ export class GlobalBtnComponent implements OnInit {
             this.menuList = Object.values(menu)[0];
         });
     }
-    selectVal(val: any) {
-        return (val !== 0 ? this.store.dispatch(new SetglobalBtnListActions.Setglobalbtn(val)) : null)
+    selectVal(val: string) {
+        this.store.dispatch(new SetglobalBtnListActions.Setglobalbtn(val))
     }
 }

@@ -10,7 +10,7 @@ export function globalBtnListReducer(state: DropdownMenuItem = initialState,
     action: SetglobalBtnListActions.SetglobalBtnListActions) {
     switch (action.type) {
         case SetglobalBtnListActions.SET_GRS_DROPDOWN:
-            state.menuItems.unshift(state.menuItems[action.payload]);
+            state.menuItems.unshift(action.payload);
             return Object.assign({}, state,
                 [state.menuItems.filter((el, i) => {
                     return state.menuItems.indexOf(el) == i;
