@@ -1,5 +1,4 @@
 import { Component, ViewChild, ViewChildren, AfterViewInit, TemplateRef, ViewContainerRef, QueryList, OnInit } from '@angular/core';
-import { GlobalBtnDirective } from "./global-btn.directive";
 import { Store } from '@ngrx/store';
 import { DropdownMenuItem } from './store/model/global-btn.model';
 import { Observable } from 'rxjs';

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AgGridNg2 } from 'ag-grid-angular';
 import { AgGridDataService } from '../shared/ag-grid-data.service';
+import { GridOptions } from 'ag-grid-community';
 
 @Component({
   selector: 'app-ag-grid',
@@ -10,8 +11,12 @@ import { AgGridDataService } from '../shared/ag-grid-data.service';
 })
 export class AgGridComponent implements OnInit {
   @ViewChild('agGrid') agGrid: AgGridNg2;
+  private gridOptions: GridOptions;
   title = 'app';
-  constructor(private http: HttpClient, private gridData: AgGridDataService) { }
+  constructor(private http: HttpClient, private gridData: AgGridDataService) {
+    this.gridOptions = <GridOptions>{}
+
+  }
   columnDefs = this.gridData.fetchColumn();
   rowData = this.gridData.fetchData();
   ngOnInit() {

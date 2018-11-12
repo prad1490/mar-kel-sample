@@ -29,7 +29,7 @@
               </div>
               <!--end of col-->
               <div class="inlineBlock flexBasis72">
-                <input formControlName="searchInput" class="form-control form-control-lg form-control-borderless bgMarkellRed noBorder placeholderSearch fullHeight txtWhite"
+                <input formControlName="searchInput" (keyup)="searchData($event)" class="form-control form-control-lg form-control-borderless bgMarkellRed noBorder placeholderSearch fullHeight txtWhite"
                   type="search" placeholder="Search by Deal#/ Deal name">
               </div>
               <!--end of col-->

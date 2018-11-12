@@ -1,0 +1,25 @@
+<ul>
+    <li id="drop-area" *ngFor="let dir of directories; let i=index;" class="droparea" (dragover)="dragover($event)"
+        (drop)="drop($event)" (dragleave)=" dragleave($event)">
+
+        <span>
+            <i class="iconButton fa txtRed txtSize18" [ngClass]="(dir.getIcon()) ? 'fa-chevron-down':'fa-chevron-right'"
+                (click)="dir.toggle()" aria-hidden="true">
+                <i class="fa fa-file-text txtRed fileIcon txtSize32 pad-10-left pad-7-right" aria-hidden="true"></i>
+            </i> {{ dir.name }}
+        </span>
+
+        <div *ngIf="dir.expanded">
+
+            <ul>
+                <li *ngFor="let file of dir.files" class="pad-70-left" #addFile>
+                    <i class="fa fa-file-text txtRed  txtSize32 pad-10-left pad-7-right" aria-hidden="true"></i>{{file}}
+                </li>
+            </ul>
+
+            <tree-view [directories]="dir.directories"></tree-view>
+
+        </div>
+
+    </li>
+</ul>

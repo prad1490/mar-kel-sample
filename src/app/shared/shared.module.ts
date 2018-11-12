@@ -5,19 +5,25 @@ import { GlobalBtnComponent } from './header/global-btn/global-btn-component';
 import { HeaderComponent } from './header/header.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TreeView } from './documents/document-view';
+import { TreeViewDemo } from './documents/document-view-demo';
 
 @NgModule({
     imports: [CommonModule, ReactiveFormsModule],
     declarations: [
         GlobalBtnDirective,
         GlobalBtnComponent,
-        HeaderComponent
+        HeaderComponent,
+        TreeViewDemo,
+        TreeView
     ],
     exports: [
         GlobalBtnDirective,
         GlobalBtnComponent,
         HeaderComponent,
-        AngularFontAwesomeModule
+        AngularFontAwesomeModule,
+        TreeViewDemo,
+        TreeView
     ]
 })
 export class SharedModule { }
