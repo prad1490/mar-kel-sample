@@ -5,8 +5,9 @@ import { GlobalBtnComponent } from './header/global-btn/global-btn-component';
 import { HeaderComponent } from './header/header.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ReactiveFormsModule } from '@angular/forms';
-import { TreeView } from './documents/document-view';
-import { TreeViewDemo } from './documents/document-view-demo';
+import { ChildTreeViewComponent } from './treeview/childTreeView.component';
+import { ParentTreeViewComponent } from './treeview/parentTreeView.component';
+import { TreeViewDirective } from './treeview/treeView.directive';
 
 @NgModule({
     imports: [CommonModule, ReactiveFormsModule],
@@ -14,16 +15,17 @@ import { TreeViewDemo } from './documents/document-view-demo';
         GlobalBtnDirective,
         GlobalBtnComponent,
         HeaderComponent,
-        TreeViewDemo,
-        TreeView
+        ParentTreeViewComponent,
+        TreeViewDirective,
+        ChildTreeViewComponent
     ],
     exports: [
         GlobalBtnDirective,
         GlobalBtnComponent,
         HeaderComponent,
         AngularFontAwesomeModule,
-        TreeViewDemo,
-        TreeView
+        ParentTreeViewComponent,
+        ChildTreeViewComponent
     ]
 })
 export class SharedModule { }

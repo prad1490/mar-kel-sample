@@ -1,55 +1,58 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Directory } from './document-view-directory';
+import { TreeView } from './treeview.model';
 
 @Component({
-    selector: 'tree-view',
-    templateUrl: './document-view.html',
-    styleUrls: ['./document-view.scss']
+    selector: 'child-tree-view',
+    templateUrl: './childTreeView.html',
+    styleUrls: ['./childTreeView.scss']
 })
 
-export class TreeView {
-    @Input() directories: Array<Directory>;
+export class ChildTreeViewComponent {
+    @Input() directories: Array<TreeView>;
     files: any; filesToUpload: Array<File>;
     @Output() uploadFileEvent = new EventEmitter<any>();
+    folder: any;
 
     constructor() {
         this.filesToUpload = [];
     }
 
-    dragover(event) {
+    dragover(event, folder) {
         event.preventDefault();
         event.stopPropagation();
         // this.background = '#999';
     }
-    dragleave(event) {
+    dragleave(event, folder) {
         event.preventDefault();
         event.stopPropagation();
         //this.background = 'transparent'
     }
-    drop(event) {
+    drop(event, folder) {
+        ;
         event.preventDefault();
         event.stopPropagation();
         this.files = event.dataTransfer.files;
-        this.processFile(this.files);
+        this.folder = folder;
+        this.processFile(this.files, this.folder);
+
     }
 
-    processFile(fileInput: any) {
-        debugger;
+    processFile(fileInput: any, folder) {
         this.filesToUpload = <Array<File>>fileInput;
-        this.upload();
+        this.upload(this.folder);
     }
 
-    upload() {
-        debugger;
-        this.makeFileRequest("http://localhost:1337/", [], this.filesToUpload).then((result) => {
+    upload(folderName) {
+        ;
+        this.makeFileRequest("http://localhost:1337/", [], this.filesToUpload, folderName).then((result) => {
             console.log(result);
         }, (error) => {
             console.error(error);
         });
     }
 
-    makeFileRequest(url: string, params: Array<string>, files: Array<File>) {
-        debugger;
+    makeFileRequest(url: string, params: Array<string>, files: Array<File>, folderName) {
+        ;
         return new Promise((resolve, reject) => {
             var formData: any = new FormData();
             var xhr = new XMLHttpRequest();
@@ -66,8 +69,7 @@ export class TreeView {
                 }
             }
             xhr.open("POST", url, true);
-            this.uploadFileEvent.emit(formData.get('uploads[]').name);
-
+            this.uploadFileEvent.emit({ formData: formData.get('uploads[]').name, folder: folderName });
             xhr.send(formData);
         });
     }
