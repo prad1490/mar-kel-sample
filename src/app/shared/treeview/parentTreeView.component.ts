@@ -51,7 +51,7 @@ export class ParentTreeViewComponent implements OnInit {
                 const f = factories.componentFactories[0];
                 const cmpRef = f.create(this._injector, [], null, this._m);
                 cmpRef.instance.fileName = this.file;
-                this._container.insert(cmpRef.hostView); // Uncomment to add after the child
+                this._container.insert(cmpRef.hostView); // Here problem is it is addding after the child.
             });
     }
 
