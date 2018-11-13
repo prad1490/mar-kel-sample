@@ -38,7 +38,7 @@ export class ParentTreeViewComponent implements OnInit {
     receiveFiles(fileInput) {
         this.file = fileInput.formData;
         this.whichFolder = fileInput.folder;
-        // alert("file uploaded in - " + this.whichFolder);
+        alert("file uploaded in - " + this.whichFolder.toUpperCase());
         this.dynamicTemplate = `
         <li class="pad-70-left">
              <i class="fa fa-file-text txtRed  txtSize32 pad-10-left pad-7-right" aria-hidden="true"></i>
