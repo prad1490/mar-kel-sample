@@ -12,23 +12,18 @@ export class ChildTreeViewComponent {
     files: any; filesToUpload: Array<File>;
     @Output() uploadFileEvent = new EventEmitter<any>();
     folder: any;
-
     constructor() {
         this.filesToUpload = [];
     }
-
     dragover(event, folder) {
         event.preventDefault();
         event.stopPropagation();
-        // this.background = '#999';
     }
     dragleave(event, folder) {
         event.preventDefault();
         event.stopPropagation();
-        //this.background = 'transparent'
     }
     drop(event, folder) {
-        ;
         event.preventDefault();
         event.stopPropagation();
         this.files = event.dataTransfer.files;
@@ -73,7 +68,4 @@ export class ChildTreeViewComponent {
             xhr.send(formData);
         });
     }
-
-
-
 }

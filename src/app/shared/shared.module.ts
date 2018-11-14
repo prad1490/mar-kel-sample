@@ -17,7 +17,8 @@ import { TreeViewDirective } from './treeview/treeView.directive';
         HeaderComponent,
         ParentTreeViewComponent,
         TreeViewDirective,
-        ChildTreeViewComponent
+        ChildTreeViewComponent,
+
     ],
     exports: [
         GlobalBtnDirective,
@@ -25,7 +26,8 @@ import { TreeViewDirective } from './treeview/treeView.directive';
         HeaderComponent,
         AngularFontAwesomeModule,
         ParentTreeViewComponent,
-        ChildTreeViewComponent
+        ChildTreeViewComponent,
+
     ]
 })
 export class SharedModule { }
