@@ -7,13 +7,16 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ChildTreeViewComponent } from './treeview/childTreeView.component';
 import { ParentTreeViewComponent } from './treeview/parentTreeView.component';
+import { FileSelectDirective } from 'ng2-file-upload';
+import { FormsModule } from '@angular/forms';
 import { TreeViewDirective } from './treeview/treeView.directive';
 
 @NgModule({
-    imports: [CommonModule, ReactiveFormsModule],
+    imports: [CommonModule, ReactiveFormsModule, FormsModule],
     declarations: [
         GlobalBtnDirective,
         GlobalBtnComponent,
+        FileSelectDirective,
         HeaderComponent,
         ParentTreeViewComponent,
         TreeViewDirective,
@@ -24,6 +27,7 @@ import { TreeViewDirective } from './treeview/treeView.directive';
         GlobalBtnDirective,
         GlobalBtnComponent,
         HeaderComponent,
+        FileSelectDirective,
         AngularFontAwesomeModule,
         ParentTreeViewComponent,
         ChildTreeViewComponent,

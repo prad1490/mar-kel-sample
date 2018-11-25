@@ -27,10 +27,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/scss/styles.scss",
+               "src/scss/styles.scss",
               "node_modules/font-awesome/css/font-awesome.css"
             ],
-            "scripts": [
+              "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
@@ -51,7 +51,14 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
@@ -59,7 +66,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "markel-app:build",
-            "port": 1337
+			"port": 1337
           },
           "configurations": {
             "production": {
@@ -81,7 +88,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/scss/styles.scss"
+              "src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -107,6 +114,7 @@
     "markel-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
+      "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
